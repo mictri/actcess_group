@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    src: url('../fonts/Montserrat-SemiBold.ttf'); 
+	font-weight: 600;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "HandelGo";
+    font-style: normal;
+    src: url('../fonts/HandelGo.ttf'); 
+	font-weight: 400;
+}
+
+
+@import "tailwindcss";
+@theme {
+  --color-darkBrown: #413C39;
+  --color-darkRed: #861C3C;
+  --bg-darkRed: 861C3C;
+  --font-noto: "Noto Sans JP", sans-serif;
+  --font-MontserratSB: "Montserrat", sans-serif;
+  --font-HandelGo: "HandelGo";
+}
+
+.fcv-photoBlock {
+    @apply block mx-auto;
+  }
+.fcv-transitionAll {
+  @apply transition delay-100 duration-100;
+}
+#root {
+    @apply font-noto;
+}
