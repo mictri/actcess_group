@@ -1,5 +1,8 @@
-node_modules/
-*.log
+# Bỏ qua thư mục
+/node_modules/
+/assets/images/
+/assets/fonts/
+
+# Bỏ qua tập tin cụ thể
 *.json
-assets/fonts/
-assets/images/
+readme.txt
