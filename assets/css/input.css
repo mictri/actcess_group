@@ -21,10 +21,14 @@
 @theme {
   --color-darkBrown: #413C39;
   --color-darkRed: #861C3C;
+  --color-lightGray: #F3F4FA;
   --bg-darkRed: 861C3C;
   --font-noto: "Noto Sans JP", sans-serif;
   --font-MontserratSB: "Montserrat", sans-serif;
   --font-HandelGo: "HandelGo";
+  --shadow-custom1: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-custom2: 4px 4px 4px rgba(134, 28, 60, 0.1);
+  --shadow-custom3: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .fcv-photoBlock {
@@ -33,6 +37,92 @@
 .fcv-transitionAll {
   @apply transition delay-100 duration-100;
 }
-#root {
-    @apply font-noto;
+.fcv-bnrshared1 {
+@apply bg-black shadow-2xl py-4
+        rounded-3xl overflow-hidden 
+        relative leading-1 font-medium 
+        text-[13px] text-white block 
+        after:bg-[url(../images/icon_arrow.svg)]
+        after:bg-no-repeat
+        after:bg-cover
+        after:w-[7px]
+        after:h-[10px]
+        after:ml-[18px]
+        after:z-2
+        after:relative
+        after:inline-block
+        hover:opacity-80
 }
+
+.fcv-bnrshared2 {
+@apply  py-4
+        overflow-hidden 
+        relative leading-4 font-medium 
+        text-[13px] block 
+        text-center
+        after:bg-[url(../images/icon_arrow_b.svg)]
+        after:bg-no-repeat
+        after:bg-cover
+        after:w-[7px]
+        after:h-[10px]
+        after:ml-[18px]
+        after:z-2
+        after:relative
+        after:inline-block
+        hover:opacity-80
+}
+
+#root {
+    @apply font-noto leading-[2];
+}
+
+.fcv-wrap {
+  @apply mx-auto w-5xl
+}
+.fcv_scrollText {
+  @apply  text-8xl
+          font-MontserratSB
+          z-0
+          font-bold
+          mx-3.5
+          inline-block
+          text-lightGray
+}
+.fcv-news__feedA {
+  @apply block relative 
+        before:bg-[url(../images/icon_arrow.svg)] 
+        before:bg-no-repeat 
+        before:w-[7px] 
+        before:h-[10px] 
+        before:absolute
+        before:top-[50%]
+        before:mt-[-5px]
+        before:right-[17px]
+        before:z-2
+        after:absolute
+        after:bg-black
+        after:rounded-br-3xl
+        after:rounded-tr-3xl
+        after:shadow-custom1
+        after:top-0
+        after:right-[-10px]
+        after:w-[56px]
+        after:h-[100%]
+}
+
+.fcv-news__feedDl {
+  @apply flex text-[14px] bg-white shadow-custom1 
+  overflow-hidden leading-4 py-3.5 px-8 justify-between
+  mr-[52px] my-4
+}
+.fcv-news__feedDt {
+  @apply font-MontserratSB font-medium w-[32%];
+}
+.fcv-news__feedCate {
+  @apply font-semibold text-gray-400 pl-[20px];
+}
+.fcv-news__feedDd {
+  @apply w-[68%] overflow-hidden max-h-[2rem] line-clamp-1 whitespace-normal;
+}
+
+
