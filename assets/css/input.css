@@ -25,6 +25,7 @@
   --bg-darkRed: 861C3C;
   --font-noto: "Noto Sans JP", sans-serif;
   --font-MontserratSB: "Montserrat", sans-serif;
+  --font-Roboto: "Roboto", "Arial", sans-serif;
   --font-HandelGo: "HandelGo";
   --shadow-custom1: 0 4px 4px rgba(0, 0, 0, 0.25);
   --shadow-custom2: 4px 4px 4px rgba(134, 28, 60, 0.1);
@@ -35,7 +36,7 @@
     @apply block mx-auto;
   }
 .fcv-transitionAll {
-  @apply transition delay-100 duration-100;
+  @apply  transition-all  duration-400  ease-in-out
 }
 .fcv-bnrshared1 {
 @apply bg-black shadow-2xl py-4
@@ -51,6 +52,7 @@
         after:z-2
         after:relative
         after:inline-block
+        text-center
         hover:opacity-80
 }
 
@@ -77,14 +79,21 @@
 }
 
 .fcv-wrap {
-  @apply mx-auto w-5xl
+  @apply mx-auto 
+  w-auto
+  px-5
+  md:w-5xl
+  md:px-2.5
 }
 .fcv_scrollText {
-  @apply  text-8xl
+  @apply  
+  text-6xl  
+  md:text-8xl
           font-MontserratSB
           z-0
           font-bold
-          mx-3.5
+          mx-3
+          md:mx-3.5
           inline-block
           text-lightGray
 }
@@ -111,18 +120,483 @@
 }
 
 .fcv-news__feedDl {
-  @apply flex text-[14px] bg-white shadow-custom1 
+  @apply 
+  block
+  md:flex 
+  text-[14px] 
+  bg-white shadow-custom1 
   overflow-hidden leading-4 py-3.5 px-8 justify-between
   mr-[52px] my-4
 }
 .fcv-news__feedDt {
-  @apply font-MontserratSB font-medium w-[32%];
+  @apply 
+  font-MontserratSB 
+  font-medium 
+  mb-2
+  md:mb-0
+  md:w-[32%]
 }
 .fcv-news__feedCate {
-  @apply font-semibold text-gray-400 pl-[20px];
+  @apply font-semibold text-gray-400 pl-[20px]
 }
 .fcv-news__feedDd {
-  @apply w-[68%] overflow-hidden max-h-[2rem] line-clamp-1 whitespace-normal;
+  @apply  
+  md:w-[68%] 
+  overflow-hidden max-h-[2rem] line-clamp-1 whitespace-normal
+}
+
+.fcv-title__c {
+  @apply relative mb-20
+}
+.fcv-title__cH3 {
+@apply 
+text-darkRed 
+mb-2.5 
+leading-none 
+text-2xl 
+md:text-3xl 
+font-MontserratSB font-semibold
+}
+.fcv-title__cH2 {
+@apply text-darkBrown mb-2.5 
+leading-none 
+text-7xl 
+md:text-8xl 
+font-MontserratSB font-bold
+}
+.fcv-title__cP {
+  @apply 
+  text-[16px] 
+  md:text-[18px] 
+  leading-none tracking-tighter
+}
+
+.fcv-ob_img {
+  @apply bg-cover bg-center relative
+}
+.fcv-ob_imgI {
+  @apply object-cover w-[100%] h-[100%] 
+  md:absolute
+  md:top-0
+  md:left-0
+  md:right-0
+  md:bottom-0
+}
+
+.fcv-dflexjus {
+  @apply 
+  md:flex 
+  md:justify-between
+}
+
+.fcv-dflexjusRever {
+  @apply flex-row-reverse
 }
 
 
+
+.fcv-strengthI {
+  @apply 
+  w-[100%] 
+  h-[80vw] 
+  md:w-[55%] 
+  md:h-[396px] 
+  mr-0
+}
+
+.fcv-strengthBox {
+  @apply 
+  pt-6
+  md:pt-0
+  md:w-[35%] 
+  md:ml-[3px]
+}
+.fcv-strengthNum {
+  @apply text-darkBrown 
+  text-[18px] 
+  md:text-[20px] 
+  font-MontserratSB
+  font-semibold
+  inline-block
+  border-b-2
+  border-darkBrown
+}
+
+.fcv-ttlC {
+  @apply 
+  text-[20px]
+  md:text-[24px]
+  leading-11
+  font-bold
+  text-black
+  tracking-tighter
+}
+
+.fcv-strengthDl {
+  @apply pt-10
+}
+.fcv-strengthDt {
+  @apply mb-7
+}
+.fcv-strengthDd {
+  @apply w-auto
+}
+
+.slick-next,
+.slick-prev {
+  @apply  text-[0px]
+  leading-none
+  absolute
+  block
+  w-[48px]
+  h-[48px]
+  p-0
+  -bottom-[73px]
+  cursor-pointer
+  border-0
+  outline-0
+  z-1
+  bg-black
+  rounded-full
+  overflow-hidden
+  shadow-custom1
+  transition
+  delay-200 
+  duration-200
+  before:bg-[url(../images/icon_arrow.svg)]
+  before:w-[7px]
+  before:h-[10px]
+  before:block
+  before:absolute
+  before:left-[50%]
+  before:top-[50%]
+  before:transform
+  before:-translate-x-1/2
+  before:-translate-y-1/2
+  hover:bg-gray-300
+}
+
+
+.slick-prev {
+  @apply left-[4px]
+  before:rotate-180
+}
+
+.slick-next {
+  @apply left-[73px]
+}
+
+
+.fcv-strength {
+@apply relative
+  py-36
+  after:bg-gray-200
+  after:top-[20vw]
+  md:after:top-[200px]
+  after:right-0
+  after:bottom-0
+  after:rounded-tl-[20px]
+  after:rounded-bl-[20px]
+  after:absolute
+  after:w-[50vw]
+  md:after:w-[calc(50%-237px)]
+  after:-z-1
+}
+
+
+.fcv-services {
+  @apply py-32
+  
+}
+.fcv-servicesPhoto {
+  @apply 
+  h-[80vw]
+  -ml-[22px]
+  md:ml-0
+  md:w-[485px]
+  md:h-[964px]
+  rounded-tr-[10px]
+  rounded-br-[10px]
+  overflow-hidden
+  md:absolute
+  md:right-[calc(50%+236px)]
+}
+.fcv-servicesBox {
+  @apply
+  md:w-[57%]
+  md:ml-auto
+  pt-[53px]
+}
+.fcv-title__c {
+  @apply
+  mb-[53px]
+  md:mb-[83px]
+}
+.fcv-servicesIcon1,
+.fcv-servicesIcon2,
+.fcv-servicesIcon3,
+.fcv-servicesIcon4,
+.fcv-servicesIcon5 {
+  @apply relative
+  before:absolute
+  before:top-1/2
+  before:transform
+  before:-translate-y-1/2
+  before:left-6
+   before:bg-size-[100%_auto]
+}
+
+.fcv-servicesIcon1 {
+  @apply
+    before:w-[34px]
+    before:h-[34px]
+    before:left-[10px]
+    before:bg-[url(../images/icon_1.svg)]
+   
+}
+.fcv-servicesIcon2 {
+  @apply
+    before:w-[50px]
+    before:h-[50px]
+    before:left-[3px]
+    before:bg-[url(../images/icon_2.svg)]
+}
+.fcv-servicesIcon3 {
+  @apply
+    before:w-[41px]
+    before:h-[43px]
+    before:left-[6px]
+    before:bg-[url(../images/icon_3.svg)]
+
+}
+.fcv-servicesIcon4 {
+  @apply
+    before:w-[42px]
+    before:h-[39px]
+    before:left-[6px]
+    before:bg-[url(../images/icon_4.svg)]
+}
+.fcv-servicesIcon5 {
+  @apply
+    before:w-[38px]
+    before:h-[37px]
+    before:left-[4px]
+    before:bg-[url(../images/icon_5.svg)]
+
+}
+.fcv-servicesLink {
+  @apply
+  block
+  z-2
+  text-[16px]
+  md:text-2xl
+  relative
+  font-bold
+  border-t-[1px]
+  border-b-[1px]
+  border-t-gray-400
+  border-b-gray-400
+  py-7
+  pl-[67px]
+  pr-[54px]
+  md:pr-[10px]
+  -mb-[1px]
+  transition-all
+  duration-400
+  ease-in-out
+  after:bg-[url(../images/icon_arrow.svg)]
+  after:bg-center
+  after:w-[7px]
+  after:h-[10px]
+  after:bg-size-[100%_auto]
+  after:absolute
+  after:top-[50%]
+  after:right-[18px]
+  md:after:right-[23px]
+  after:transform
+  after:-translate-y-1/2
+  before:absolute
+  before:top-[50%]
+  before:w-[38px]
+  before:h-[38px]
+  md:before:w-[48px]
+  md:before:h-[48px]
+  before:bg-[#861C3C]
+  before:rounded-full
+  before:shadow-custom1
+  before:right-[3px]
+  before:-translate-y-1/2
+  hover:opacity-60
+}
+
+
+.fcv-recruit {
+  @apply relative
+  pl-5
+  md:pl-0
+}
+
+.fcv-recruitPara {
+  @apply absolute inset-0 h-full
+  rounded-tl-[15px]
+  rounded-bl-[15px]
+  left-5
+  md:left-10
+  overflow-hidden
+}
+
+
+
+.fcv-breadcrumb {
+  @apply bg-[#373230]
+  border-b-[1px]
+  border-b-gray-400
+  text-white
+  
+}
+
+
+
+
+
+.fcv-footer {
+  @apply
+  bg-[#373230]
+  py-12
+  text-white
+}
+
+.fcv-footernav {
+  @apply
+  flex 
+  flex-wrap
+  md:gap-[83px]
+  mb-16 pl-1
+}
+
+.fcv-footerLink {
+  @apply
+  font-medium
+  text-[18px]
+  mb-3
+  md:mb-3
+  block
+  w-[50%]
+  md:w-auto
+  leading-none
+}
+
+.fcv-footerBottom {
+@apply
+text-[12px]
+font-Roboto
+text-gray-400
+pl-[8px]
+tracking-tighter
+}
+
+.fcv-pagetop {
+  @apply
+  w-[55px]
+  fixed
+  z-10
+  bottom-[95px]
+  right-[20px]
+  md:bottom-[50px]
+  md:right-[50px]
+
+}
+
+address {
+  @apply tracking-wide
+  not-italic
+}
+
+.fcv-hambugerOff {
+  @apply flex flex-col justify-between w-20 h-[20px] transform transition-all duration-300 origin-center overflow-hidden
+}
+
+
+.fcv-hambugerOn {
+  @apply absolute items-center justify-between transform transition-all duration-200 top-1/2 -translate-x-20 translate-x-1 flex w-0 w-12 opacity-0
+  group-hover:opacity-0
+
+
+}
+.fcv-hambugerOnLine1 {
+  @apply bg-white h-[2px] w-10 mx-auto transform transition-all duration-300 origin-left
+}
+
+.fcv-hambugerOnLine2 {
+  @apply bg-white h-[2px] w-10 rounded mx-auto transform transition-all duration-300
+}
+
+.fcv-hambugerOnLine3 {
+  @apply bg-white h-[2px] w-10 transform mx-auto transition-all duration-300 origin-left
+}
+
+.fcv-hambugerline1 {
+@apply absolute bg-white h-[2px] w-10 transform transition-all duration-200 rotate-0 delay-300 rotate-45
+}
+.fcv-hambugerline2 
+{
+  @apply absolute bg-white h-[2px] w-10 transform transition-all duration-200 -rotate-0 delay-300 -rotate-45
+}
+.nav-Opened .fcv-hambugerOn {
+@apply opacity-100 
+}
+.nav-Opened .fcv-hambugerOff {
+@apply opacity-0 
+}
+
+.fcv-headerMenu {
+  @apply 
+  fixed 
+  top-0 
+  -right-[100%]
+  bottom-0 
+ md:w-[350px] 
+  opacity-0 
+  invisible 
+  transition-all
+  duration-[350ms] 
+  overflow-auto 
+  pb-0 
+  bg-white z-19
+  w-full 
+}
+
+
+.nav-Opened .fcv-headerMenu {
+  @apply 
+  right-0
+  visible
+  opacity-100
+}
+
+.g_nav {
+  @apply block text-center py-36 px-5
+}
+.g_nav li {
+  @apply relative border-l-0 border-b border-t border-b-[#B2C1C3] border-t-[#B2C1C3] mb-[-1px] ml-0 
+}
+.g_nav a {
+  @apply 
+  w-full 
+  box-border block
+  text-center 
+  h-auto text-black 
+  text-[18px] 
+  tracking-wide 
+  leading-[30px]
+   font-normal
+  py-3
+  hover:opacity-50
+  }
+
+  .fcv-bgOpacity {
+    @apply fixed top-0 z-11 h-[100vh] right-0 left-0 bg-black opacity-0 invisible
+  }
+  .nav-Opened  .fcv-bgOpacity {
+    @apply opacity-60 visible
+  }

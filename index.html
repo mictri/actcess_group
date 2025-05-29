@@ -7,34 +7,22 @@
     <title>ACT-CESS</title>
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/slick.min.css">
+    <link rel="stylesheet" href="./assets/css/general.css">
     <link rel="stylesheet" href="./assets/css/output.css">
 </head>
 
 <body>
     <div id="root">
+
         <header class="bg-gray-300 relative">
             <div class="fcv-wrap pt-4 mb-4">
-                <p class="logo"><img src="assets/images/logo.png" width="325" height="68" /></p>
-                <button class="fixed t-[30px] right-[30px] group cursor-pointer">
-                    <div class="relative flex overflow-hidden items-center justify-center rounded-full w-20 h-20 transform transition-all bg-darkRed ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
-                        <div class="flex flex-col justify-between w-20 h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                            <div class="bg-white h-[2px] w-10 mx-auto transform transition-all duration-300 origin-left group-hover:translate-y-6 delay-100"></div>
-                            <div class="bg-white h-[2px] w-10 rounded mx-auto transform transition-all duration-300 group-hover:translate-y-6 delay-75"></div>
-                            <div class="bg-white h-[2px] w-10 transform mx-auto transition-all duration-300 origin-left group-hover:translate-y-6"></div>
-                        </div>
-
-                        <div class="absolute items-center justify-between transform transition-all duration-500 top-1/2 -translate-x-20 group-hover:translate-x-1 flex w-0 group-hover:w-12">
-                            <div class="absolute bg-white h-[2px] w-10 transform transition-all duration-500 rotate-0 delay-300 group-hover:rotate-45"></div>
-                            <div class="absolute bg-white h-[2px] w-10 transform transition-all duration-500 -rotate-0 delay-300 group-hover:-rotate-45"></div>
-                        </div>
-                    </div>
-                </button>
-
+                <p class="logo w-[50vw] max-w-[325px] md:w-[325px]"><a href="index.html"><img src="assets/images/logo.png" width="325" height="68" /></a></p>
             </div>
             <div class="text-center pt-8 font-bold">
-                <h2 class="text-darkBrown text-8xl mb-5 font-HandelGo tracking-wide">act-cess</h2>
-                <h3 class="text-darkBrown text-5xl mb-8 font-HandelGo tracking-wider">act<span class="text-darkRed">ion-suc</span>cess</h3>
-                <h4 class="font-bold text-2xl">経営者の人生をデザインする税理士法人</h4>
+                <h2 class="text-darkBrown text-7xl md:text-8xl mb-5 font-HandelGo tracking-wide">act-cess</h2>
+                <h3 class="text-darkBrown text-4xl md:text-5xl mb-8 font-HandelGo tracking-wider">act<span class="text-darkRed">ion-suc</span>cess</h3>
+                <h4 class="font-bold text-[18px] md:text-2xl">経営者の人生をデザインする税理士法人</h4>
                 <p class="text-center"><img class="fcv-photoBlock" src="./assets/images/index/key.png" alt="" width="1116" height="392" /> </p>
             </div>
 
@@ -42,6 +30,47 @@
 
 
         </header>
+
+        <button id="hambuger__click" class="fixed top-[20px] right-[20px] md:top-[30px] md:right-[30px]  group cursor-pointer z-20">
+            <div class="relative flex overflow-hidden items-center justify-center rounded-full w-16 h-16 md:w-20 md:h-20 transform transition-all bg-darkRed ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                <div class="fcv-hambugerOff">
+                    <div class="fcv-hambugerOnLine1"></div>
+                    <div class="fcv-hambugerOnLine2"></div>
+                    <div class="fcv-hambugerOnLine3"></div>
+                </div>
+
+                <div class="fcv-hambugerOn">
+                    <div class="fcv-hambugerline1"></div>
+                    <div class="fcv-hambugerline2"></div>
+                </div>
+            </div>
+        </button>
+
+        <div id="header_menu" class="fcv-headerMenu">
+            <ul class="g_nav clearfix nav-ham">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class=""><a href="services.html">Services</a></li>
+                <li class=""><a href="company.html">Company</a></li>
+                <li class=""><a href="info.html">info</a></li>
+                <li class=""><a href="recruit.html">Recruit</a></li>
+                <li class=""><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div class="fcv-bgOpacity"></div>
+
+
+
+        <div class="fcv-ftcontact fixed bottom-[10px] left-[10px] right-[10px] md:left-auto md:bottom-auto md:top-[30px] md:right-[130px] z-10">
+            <a href="contact.html" class="fcv-transitionAll block bg-darkBrown shadow-custom1 w-full md:w-[180px] rounded-[40px] md:hover:opacity-60">
+                <dl class="text-center leading-none text-white py-5">
+                    <dt class="text-[20px] mb-[5px] tracking-normal font-MontserratSB font-semibold">CONTACT</dt>
+                    <dd class="text-[11px]">ご相談・お問い合わせ</dd>
+                </dl>
+            </a>
+        </div>
+
 
         <section id="container" class="nav-target">
 
@@ -95,22 +124,184 @@
                             </dl>
                         </a>
 
-
-
                     </div>
 
-                    <p class="w-164 mx-auto wow fadeIn"><a class="fcv-bnrshared2" href="#">詳しくはこちら</a></p>
+                    <p class="w-[164px] mx-auto wow fadeIn"><a class="fcv-bnrshared2" href="#">詳しくはこちら</a></p>
                 </div>
             </div>
 
             <!--//news blog-->
 
+            <!--Strength-->
+            <div id="strength" class="fcv-strength">
 
 
+                <div class="fcv-wrap">
+
+                    <div class="fcv-title__c wow fadeIn">
+                        <h3 class="fcv-title__cH3">Our</h3>
+                        <h2 class="fcv-title__cH2">Strength</h2>
+                        <p class="fcv-title__cP">私たちの強み</p>
+                    </div>
+
+                    <div class="slider__s wow fadeIn">
+                        <div class="strength__slick">
+                            <div>
+                                <div class="fcv-dflexjusRever fcv-dflexjus">
+                                    <p class="fcv-ob_img fcv-strengthI"><img class="fcv-ob_imgI" src="./assets/images/index/img01_01.jpg" alt="経営者の人生をデザインする税理士法人" width="1128" height="792" /></p>
+                                    <div class="fcv-strengthBox">
+                                        <p class="fcv-strengthNum">01</p>
+                                        <dl class="fcv-strengthDl">
+                                            <dt class="fcv-strengthDt fcv-ttlC">経営者の人生をデザインする<br>税理士法人</dt>
+                                            <dd class="fcv-strengthDd">創業以来、多くの経営者とのご縁に支えられてきました。ご紹介を中心に築かれたネットワークは、私たちの「信頼される姿勢」と「成果へのこだわり」の証です。業種や規模にとらわれず、多様な課題に柔軟に対応し、経営者と共に歩むパートナーであり続けます。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="fcv-dflexjusRever fcv-dflexjus">
+                                    <p class="fcv-ob_img fcv-strengthI"><img class="fcv-ob_imgI" src="./assets/images/index/img01_02.jpg" alt="経営者の人生をデザインする税理士法人" width="1128" height="792" /></p>
+                                    <div class="fcv-strengthBox">
+                                        <p class="fcv-strengthNum">02</p>
+                                        <dl class="fcv-strengthDl">
+                                            <dt class="fcv-strengthDt fcv-ttlC">幅広い年齢層と<br>柔軟な対応力</dt>
+                                            <dd class="fcv-strengthDd">税理士法人アクセスでは、若手から経験豊富な専門家までが在籍し、クラウド会計やチャットツールの活用によって、スピーディかつ柔軟な対応を実現しています。<br>変化の早い時代にも即応できる体制を整え、お客様ごとに最適なツール・方法をご提案しています。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="fcv-dflexjusRever fcv-dflexjus">
+                                    <p class="fcv-ob_img fcv-strengthI"><img class="fcv-ob_imgI" src="./assets/images/index/img01_03.jpg" alt="経営者の人生をデザインする税理士法人" width="1128" height="792" /></p>
+                                    <div class="fcv-strengthBox">
+                                        <p class="fcv-strengthNum">03</p>
+                                        <dl class="fcv-strengthDl">
+                                            <dt class="fcv-strengthDt fcv-ttlC">資金調達にも強い<br>会計事務所</dt>
+                                            <dd class="fcv-strengthDd">資金繰りに悩む創業期から、次の成長ステージを目指す経営者まで。<br>アクセスでは、金融機関との信頼関係や制度知識を活かし、融資や補助金など多様な資金調達手段をご提案しています。<br>会計・財務にとどまらない視点で、経営全体を支えるサポートを行っています。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="fcv-dflexjusRever fcv-dflexjus">
+                                    <p class="fcv-ob_img fcv-strengthI"><img class="fcv-ob_imgI" src="./assets/images/index/img01_04.jpg" alt="経営者の人生をデザインする税理士法人" width="1128" height="792" /></p>
+                                    <div class="fcv-strengthBox">
+                                        <p class="fcv-strengthNum">04</p>
+                                        <dl class="fcv-strengthDl">
+                                            <dt class="fcv-strengthDt fcv-ttlC">バックオフィス業務を<br>一括サポート</dt>
+                                            <dd class="fcv-strengthDd">会計業務に加え、経理・給与・労務・法務・総務などの実務領域もトータルで対応。<br>経営者が本業に集中できるよう、社内の煩雑な業務を一元化し、<br class="pc">必要に応じてITや自動化ツールの導入も含めた「仕組みづくり」までご提案します。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="fcv-dflexjusRever fcv-dflexjus">
+                                    <p class="fcv-ob_img fcv-strengthI"><img class="fcv-ob_imgI" src="./assets/images/index/img01_05.jpg" alt="経営者の人生をデザインする税理士法人" width="1128" height="792" /></p>
+                                    <div class="fcv-strengthBox">
+                                        <p class="fcv-strengthNum">05</p>
+                                        <dl class="fcv-strengthDl">
+                                            <dt class="fcv-strengthDt fcv-ttlC">グループ連携で経営を<br>多角的に支援</dt>
+                                            <dd class="fcv-strengthDd">税務・会計にとどまらず、相続・事業承継・弁護士による法務対応など、グループ内外の専門家と連携し、経営課題を多方面からサポートできる体制を整えています。<br>「身近な相談役」として、数字だけでなく経営者の想いや将来のビジョンにも寄り添ったご支援を大切にしています。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--//Strength-->
+
+
+            <!--SERVICE-->
+            <div id="services" class="fcv-services">
+
+                <div class="fcv-wrap">
+
+                    <p class="fcv-servicesPhoto fcv-ob_img wow fadeIn"><img class="fcv-ob_imgI" src="./assets/images/index/img02.png" alt="" width="986" height="1944" /></p>
+
+                    <div class="fcv-servicesBox">
+
+                        <div class="fcv-title__c wow fadeIn">
+                            <h3 class="fcv-title__cH3">Our</h3>
+                            <h2 class="fcv-title__cH2">Services</h2>
+                            <p class="fcv-title__cP">私たちのサービス</p>
+                        </div>
+
+
+                        <p class="fcv-ttlC mb-9">経営者のライフデザインから<br>経営全体を支援します。</p>
+                        <ul class="fcv-servicesCate mb-10">
+                            <li class="fcv-servicesIcon1"><a class="fcv-servicesLink" href="#">創業支援サービス</a></li>
+                            <li class="fcv-servicesIcon2"><a class="fcv-servicesLink" href="#">経理・総務アウトソーシング</a></li>
+                            <li class="fcv-servicesIcon3"><a class="fcv-servicesLink" href="#">資金調達コンサルティング</a></li>
+                            <li class="fcv-servicesIcon4"><a class="fcv-servicesLink" href="#">会計・税務業務全般</a></li>
+                            <li class="fcv-servicesIcon5"><a class="fcv-servicesLink" href="#">給与計算・労務相談全般</a></li>
+                        </ul>
+
+                        <p class="w-[164px]"><a class="fcv-bnrshared1 fcv-transitionAll" href="">詳しくはこちら</a></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--END SERVICE-->
+
+            <!--RECRUIT-->
+            <div id="recruit" class="fcv-recruit text-white py-24 mb-16">
+                <div class="bg-parallax fcv-recruitPara">
+                    <p class="img-parallax"><img src="./assets/images/index/img03.jpg" alt="" width="2738" height="1602" /></p>
+                </div>
+                <div class="fcv-wrap">
+                    <div class="fcv-title__c wow fadeIn !mb-10">
+                        <h2 class="fcv-title__cH2 !text-white">Recruit</h2>
+                        <p class="fcv-title__cP">採用情報</p>
+                    </div>
+
+
+                    <p class="mb-8 wow fadeIn">自分の人生に主体性を持ち、<br class="pc">理想のライフデザインに向かって挑戦し続ける。<br class="pc">そんな仲間と、未来を創っていきたい。</p>
+
+                    <p class="w-[164px] wow fadeIn"><a class="fcv-bnrshared1 fcv-transitionAll" href="">詳しくはこちら</a></p>
+                </div>
+            </div>
+            <!--//RECRUIT-->
 
 
         </section>
 
+        <div class="fcv-breadcrumb">
+            <div class="fcv-wrap">
+                <ul class="py-2">
+                    <li class="fcv-breadcrumbLi"><a class="fcv-breadcrumbA" href="index.html">TOP </a></li>
+                    <li class="fcv-breadcrumbLi"><span>Company</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer id="footer" class="fcv-footer">
+            <div class="fcv-wrap">
+                <p class="w-[320px] mb-17"><img src="./assets/images/logo_footer.png" alt="税理土法人アクセス" width="642" height="137"></p>
+                <nav class="fcv-footernav">
+                    <a class="fcv-footerLink" href="services.html">Services</a>
+                    <a class="fcv-footerLink" href="company.html">Company</a>
+                    <a class="fcv-footerLink" href="info.html">info</a>
+                    <a class="fcv-footerLink" href="recruit.html">Recruit</a>
+                    <a class="fcv-footerLink" href="contact.html">Contact</a>
+                </nav>
+
+                <div class="fcv-footerBottom">
+                    <address>Copyright act-cess All Rights Reserved.</address>
+                </div>
+            </div>
+        </footer>
+        <p class="fcv-pagetop"><a href="#root"><img src="./assets/images/pagetop.svg" alt="TOP" width="56" height="56"></a></p>
 
 
         <script src="./assets/js/jquery-3.6.0.min.js"></script>
@@ -118,6 +309,7 @@
         <script src="./assets/js/wow.min.js"></script>
         <script src="./assets/js/infiniteslidev2.js"></script>
         <script src="./assets/js/shared.js"></script>
+
 
 
         <script>

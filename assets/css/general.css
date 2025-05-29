@@ -1,0 +1,78 @@
+body.nav-Opened,
+body.nav-Opened *,
+body.nav-Opened *:hover,
+body.nav-Opened *:focus,
+body.nav-Opened *:active {
+  touch-action: none !important;
+  pointer-events: none !important; }
+
+body.nav-Opened .hamburger,
+body.nav-Opened #hambuger__click,
+body.nav-Opened #hambuger__click *,
+body.nav-Opened .fcv-headerMenu,
+body.nav-Opened .fcv-headerMenu *,
+body.nav-Opened .header_menu *,
+body.nav-Opened header .logo,
+body.nav-Opened header .logo * {
+  touch-action: auto !important;
+  pointer-events: visible !important; }
+
+body.nav-Opened {
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: none !important;
+  pointer-events: none !important; }
+
+.bg-parallax {
+	position: relative;
+	z-index: -1;
+}
+.bg-parallax .img-parallax {
+	clip: rect(0, auto, auto, 0);
+	margin-bottom: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.bg-parallax .img-parallax img {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	z-index: 0;
+	transform: translateZ(0);
+}
+
+    .fcv-breadcrumb li {
+      display: inline-block;
+	  color:#fff;
+      position: relative; }
+      .fcv-breadcrumb li a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        font-weight: 500; }
+    .fcv-breadcrumb li + li {
+      padding-left: 10px; }
+      .fcv-breadcrumb li + li::before {
+        content: "";
+        width: 1px;
+        height: 18px;
+        transform: translateY(-50%) rotate(20deg);
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        background: #fff;
+        opacity: .3; }
+
+
+
+
